@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from analyzer.views import PDFUploadView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('upload/', PDFUploadView.as_view(), name='file-upload'),
 ]
